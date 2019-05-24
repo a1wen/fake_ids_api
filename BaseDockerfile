@@ -1,0 +1,15 @@
+# Базовый образ для smev mock, чтобы после каждого коммита не устанавливать requirements
+FROM python:3.6-alpine
+
+RUN apk --update --no-cache add curl-dev libxml2-dev libxslt-dev libffi-dev gcc musl-dev libgcc curl
+RUN apk add --no-cache git postgresql-libs libressl-dev
+RUN apk add --no-cache --virtual .build-deps python3-dev musl-dev postgresql-dev linux-headers
+
+COPY ./requirements.txt /usr/src/app/
+WORKDIR /usr/src/app/
+
+ENV PYCURL_SSL_LIBRARY openssl
+
+RUN pip3 install -r requirements.txt
+
+RUN apk --purge del .build-deps

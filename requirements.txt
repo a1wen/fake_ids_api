@@ -1,0 +1,4 @@
+--extra-index-url https://pip.inplatlabs.ru/
+tornado==6.0.2
+Faker==1.0.4
+tornado_utils2==0.71.0

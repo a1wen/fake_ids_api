@@ -1,0 +1,40 @@
+{
+  "server": {
+    "port": 8880,
+    "debug": false
+  },
+  "logging": {
+    "version": 1,
+    "level": "WARNING",
+    "disable_existing_loggers": true,
+    "formatters": {
+      "verbose": {
+        "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s",
+        "datefmt": "%a, %d %b %Y %H:%M:%S %z"
+      }
+    },
+    "handlers": {
+      "console": {
+        "level": "DEBUG",
+        "class": "logging.StreamHandler",
+        "formatter": "verbose"
+      }
+    },
+    "loggers": {
+      "default": {
+        "level": "DEBUG",
+        "handlers": [
+          "console"
+        ],
+        "propagate": false
+      },
+      "momoko": {
+        "level": "WARNING",
+        "handlers": [
+          "console"
+        ],
+        "propagate": true
+      }
+    }
+  }
+}

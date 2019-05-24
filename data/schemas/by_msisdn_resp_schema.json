@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/ByMsisdnRespSchema",
+    "definitions": {
+        "ByMsisdnRespSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "msg_id": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "patronymic": {
+                    "type": "string"
+                },
+                "birth_date": {
+                    "type": "string"
+                },
+                "msisdn": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "birth_date",
+                "first_name",
+                "msg_id",
+                "msisdn",
+                "patronymic",
+                "surname"
+            ],
+            "title": "ByMsisdnRespSchema"
+        }
+    }
+}
