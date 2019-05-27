@@ -46,17 +46,6 @@ logger = getLogger('default')
 
 template_loader = TemplateLoader(path.join(BASE_DIR, 'templates'))
 
-html_template = '<html><body> {} </body></html>'
-
-response_template = {"code": 0,
-                     "description": "",
-                     "is_person_in_white_list": True,
-                     "is_person_in_stop_list": True,
-                     "is_person_in_alarm_list": True,
-                     "is_person_in_mdw_list": True,
-                     "is_person_in_terror_list": True
-                     }
-
 with open('./data/good_client_person.csv') as f:
     GOOD_CLIENT_STORAGE = DataFile(f)
 
