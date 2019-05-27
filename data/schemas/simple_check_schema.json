@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/SimpleCheck",
+    "definitions": {
+        "SimpleCheck": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "msg_id": {
+                    "type": "string"
+                },
+                "msisdn": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "patronymic": {
+                    "type": "string"
+                },
+                "birth_date": {
+                    "type": "string"
+                },
+                "series": {
+                    "type": "string"
+                },
+                "number": {
+                    "type": "string"
+                },
+                "document_type": {
+                    "type": "integer"
+                },
+                "issue_date": {
+                    "type": "string"
+                },
+                "issue_authority": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "birth_date",
+                "document_type",
+                "first_name",
+                "issue_authority",
+                "issue_date",
+                "msg_id",
+                "msisdn",
+                "number",
+                "patronymic",
+                "series",
+                "surname"
+            ],
+            "title": "SimpleCheck"
+        }
+    }
+}

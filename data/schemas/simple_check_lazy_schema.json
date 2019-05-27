@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/SimpleCheckLazy",
+    "definitions": {
+        "SimpleCheckLazy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "msg_id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "msisdn": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "patronymic": {
+                    "type": "string"
+                },
+                "birth_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "series": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "number": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "document_type": {
+                    "type": "integer"
+                },
+                "issue_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "issue_authority": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "birth_date",
+                "document_type",
+                "first_name",
+                "msg_id",
+                "msisdn",
+                "number",
+                "patronymic",
+                "surname"
+            ],
+            "title": "SimpleCheckLazy"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/GetStatus",
+    "definitions": {
+        "GetStatus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "task_id": {
+                    "type": "string"
+                },
+                "msg_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "msg_id",
+                "task_id"
+            ],
+            "title": "GetStatus"
+        }
+    }
+}
