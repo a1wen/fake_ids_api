@@ -11,5 +11,5 @@ class DataFile:
             data['msisdn']: data for data in csv_data
         }
 
-    def get(self, msisdn, default=None):
+    def get_msisdn(self, msisdn, default=None):
         return self._data.get(msisdn, default)
