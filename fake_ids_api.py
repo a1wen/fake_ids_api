@@ -15,9 +15,12 @@ def main():
     app = Application(
         handlers=[
             URLSpec(r'/ping', PingPongHandler),
-            URLSpec(r'/api/v2/by_passport_data', ByPassportData),
-            URLSpec(r'/api/v2/by_msisdn', ByMSISDN),
-            URLSpec(r'/api/v2/simple_check', SimpleCheck),
+            URLSpec(r'/api/v2/by_passport_data/', ByPassportData),
+            URLSpec(r'/api/v2/by_msisdn/', ByMSISDN),
+            URLSpec(r'/api/v2/simple_check/', SimpleCheck),
+            URLSpec(r'/api/v2/simple_check/lazy/', SimpleCheckLazy),
+            URLSpec(r'/api/v2/full_check/', FullCheck),
+            URLSpec(r'/api/v2/full_check/lazy/', FullCheckLazy),
         ],
         debug=True,
     )
