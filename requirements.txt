@@ -2,3 +2,4 @@
 tornado==6.0.2
 Faker==1.0.4
 tornado_utils2==0.71.0
+jsonschema==3.0.1
